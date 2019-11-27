@@ -1,0 +1,15 @@
+call vundle#begin()
+  Plugin 'VundleVim/Vundle.vim'
+  Plugin 'ctrlpvim/ctrlp.vim'
+  Plugin 'tpope/vim-fugitive'
+  Plugin 'tomtom/tcomment_vim'
+  Plugin 'scrooloose/nerdtree'
+  Plugin 'scrooloose/syntastic'
+call vundle#end()            " required
+
+" NerdTree
+let NERDTreeShowHidden=1
+" ctrl + n opens nerdTree
+map <C-n> :NERDTreeToggle<CR>
+" close automatically nerdtree windows when closing vim
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
