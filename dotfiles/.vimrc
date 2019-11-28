@@ -21,8 +21,8 @@ set hidden " allow unsaved background buffers and remember marks/undo for them
 set history=100 " remember more commands and search history (default is 20)
 set expandtab " insert spaces instead of tabs
 set smarttab
-set tabstop=2 " define how many spaces are added for a tab
-set shiftwidth=2 " number of spaces used for autoindent (<<, >>)
+set tabstop=4 " define how many spaces are added for a tab
+set shiftwidth=4 " number of spaces used for autoindent (<<, >>)
 set laststatus=2 " always shows statusline for every window
 set incsearch " show search result as I type
 set hlsearch " highlight the search results
