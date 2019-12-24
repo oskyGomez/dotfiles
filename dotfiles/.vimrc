@@ -99,4 +99,4 @@ nnoremap <silent> ! :set hls \| let @/=expand('<cword>')<CR>
 set scrolloff=999
 
 " Custom Commands
-command FixEnv %s/[ :\t]\+/=/g | noh
+command FixEnv %s/\(:\s\+\)/=/g | noh
