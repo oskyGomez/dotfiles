@@ -97,3 +97,6 @@ nnoremap <silent> ! :set hls \| let @/=expand('<cword>')<CR>
 
 " Keep the cursor centered while scrolling
 set scrolloff=999
+
+" Custom Commands
+command FixEnv %s/[ :\t]\+/=/g | noh
