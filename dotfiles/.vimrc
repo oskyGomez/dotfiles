@@ -66,16 +66,6 @@ nnoremap <C-l> <C-w>l
 nnoremap <tab> %
 vnoremap <tab> %
 
-" Remove trailing whitespaces and blank lines
-function! StripTrailingWhitespace()
-if &ft !~ 'markdown'
-  call Preserve('%s/\s\+$//e')
-endif
-endfun
-
-autocmd BufWritePre * call StripTrailingWhitespace()
-autocmd BufWritePre * call Preserve('%s/\v($\n\s*)+%$//e')
-
 " Make sure vim returns to the same line when you reopen a file
 augroup line_return
   au!

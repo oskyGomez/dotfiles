@@ -5,10 +5,27 @@ call vundle#begin()
   Plugin 'tomtom/tcomment_vim'
   Plugin 'scrooloose/nerdtree'
   Plugin 'scrooloose/syntastic'
+  Plugin 'itchyny/lightline.vim'
 call vundle#end()            " required
 
 " NerdTree
 let NERDTreeShowHidden=1
+" Lightline
+set laststatus=2
+if !has('gui_running')
+  set t_Co=256
+endif
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
+      \ },
+      \ 'component': {
+      \   'charvaluehex': '0x%B'
+      \ },
+      \ }
 " ctrl + n opens nerdTree
 map <C-n> :NERDTreeToggle<CR>
 " close automatically nerdtree windows when closing vim
